@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{4DCD83C3-E97B-4B75-93BD-38C2284A1B72}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WarehouseSystem</RootNamespace>
+    <AssemblyName>WarehouseSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+    <ApplicationIcon>icons\warehouse_NK0_icon.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="MySql.Data" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controlls\DashboardControl.xaml.cs">
+      <DependentUpon>DashboardControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controlls\DatabaseControl.xaml.cs">
+      <DependentUpon>DatabaseControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controlls\DevelopersControl.xaml.cs">
+      <DependentUpon>DevelopersControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controlls\TransactionControl.xaml.cs">
+      <DependentUpon>TransactionControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Database\DbConnection.cs" />
+    <Compile Include="Model\ProductCategoryDbUtils.cs" />
+    <Compile Include="Model\ProductDbUtils.cs" />
+    <Compile Include="Model\UserDbUtils.cs" />
+    <Compile Include="Poco\Product.cs" />
+    <Compile Include="Poco\ProductCategory.cs" />
+    <Compile Include="Poco\Transaction.cs" />
+    <Compile Include="Poco\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\WPFAssemblyInfo.cs" />
+    <Compile Include="Views\CategoryOpWindow.xaml.cs">
+      <DependentUpon>CategoryOpWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\CategoryWindow.xaml.cs">
+      <DependentUpon>CategoryWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ContactWindow.xaml.cs">
+      <DependentUpon>ContactWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\CreateCategory.xaml.cs">
+      <DependentUpon>CreateCategory.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\InItemWindow.xaml.cs">
+      <DependentUpon>InItemWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\OperationWindow.xaml.cs">
+      <DependentUpon>OperationWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\OutItemWindow.xaml.cs">
+      <DependentUpon>OutItemWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\ProductWindow.xaml.cs">
+      <DependentUpon>ProductWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controlls\DashboardControl.xaml" />
+    <Page Include="Controlls\DatabaseControl.xaml" />
+    <Page Include="Controlls\DevelopersControl.xaml" />
+    <Page Include="Controlls\TransactionControl.xaml" />
+    <Page Include="Views\CategoryOpWindow.xaml" />
+    <Page Include="Views\CategoryWindow.xaml" />
+    <Page Include="Views\ContactWindow.xaml" />
+    <Page Include="Views\CreateCategory.xaml" />
+    <Page Include="Views\InItemWindow.xaml" />
+    <Page Include="Views\MainWindow.xaml" />
+    <Page Include="Views\OperationWindow.xaml" />
+    <Page Include="Views\OutItemWindow.xaml" />
+    <Page Include="Views\ProductWindow.xaml" />
+    <Page Include="Views\Register.xaml" />
+    <Page Include="Views\SplashScreen.xaml" />
+    <Page Include="Window1.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img" />
+    <Folder Include="Model" />
+    <Folder Include="Database" />
+    <Folder Include="Controlls" />
+    <Folder Include="Views" />
+    <Folder Include="Poco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\3d-printer.png" />
+    <Resource Include="img\analytics.png" />
+    <Resource Include="img\Available Updates_50px.png" />
+    <Resource Include="img\bars.png" />
+    <Resource Include="img\Buy_100px.png" />
+    <Resource Include="img\Category_50px.png" />
+    <Resource Include="img\Checked_100px.png" />
+    <Resource Include="img\Circled Up 2_100px.png" />
+    <Resource Include="img\Circled User Male.png" />
+    <Resource Include="img\Circled User Male_100px.png" />
+    <Resource Include="img\Circled User Male_50px.png" />
+    <Resource Include="img\Clock_50px.png" />
+    <Resource Include="img\Combo Chart_100px.png" />
+    <Resource Include="img\Database_100px.png" />
+    <Resource Include="img\Delete_50px.png" />
+    <Resource Include="img\delivery-truck.png" />
+    <Resource Include="img\Facebook_50px.png" />
+    <Resource Include="img\Geo-fence_50px.png" />
+    <Resource Include="img\Git_50px.png" />
+    <Resource Include="img\Gmail.png" />
+    <Resource Include="img\Gmail_50px.png" />
+    <Resource Include="img\import %281%29.png" />
+    <Resource Include="img\import.png" />
+    <Resource Include="img\keyhole.png" />
+    <Resource Include="img\Logout Rounded Up_100px.png" />
+    <Resource Include="img\Message Filled_50px.png" />
+    <Resource Include="img\network.png" />
+    <Resource Include="img\New Product_50px.png" />
+    <Resource Include="img\Phone_50px.png" />
+    <Resource Include="img\Plus_100px.png" />
+    <Resource Include="img\programmer.png" />
+    <Resource Include="img\Search_100px.png" />
+    <Resource Include="img\server.png" />
+    <Resource Include="img\Share_100px.png" />
+    <Resource Include="img\Share_24px.png" />
+    <Resource Include="img\Skype_50px.png" />
+    <Resource Include="img\Source Code_100px.png" />
+    <Resource Include="img\stock.png" />
+    <Resource Include="img\transaction.png" />
+    <Resource Include="img\US Dollar_100px.png" />
+    <Resource Include="img\YouTube 2_50px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

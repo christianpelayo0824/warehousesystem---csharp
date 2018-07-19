@@ -1,0 +1,20 @@
+﻿WarehouseSystem
+
+
+winexe
+C#
+.cs
+C:\Users\chris\OneDrive\Documents\SharpDevelop Projects\WarehouseSystem\WarehouseSystem\obj\Debug\
+WarehouseSystem
+none
+false
+DEBUG;TRACE
+C:\Users\chris\OneDrive\Documents\SharpDevelop Projects\WarehouseSystem\WarehouseSystem\App.xaml
+162117006061
+
+2793187520
+13-824271514
+Controlls\DashboardControl.xaml;Controlls\DatabaseControl.xaml;Controlls\DevelopersControl.xaml;Controlls\TransactionControl.xaml;Views\CategoryOpWindow.xaml;Views\CategoryWindow.xaml;Views\ContactWindow.xaml;Views\CreateCategory.xaml;Views\InItemWindow.xaml;Views\MainWindow.xaml;Views\OperationWindow.xaml;Views\OutItemWindow.xaml;Views\ProductWindow.xaml;Views\Register.xaml;Views\SplashScreen.xaml;Window1.xaml;
+
+False
+
